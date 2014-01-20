@@ -1,0 +1,19 @@
+{
+  "base_url" : "https://btc-e.com/api/2",
+  "methods" : {
+	"fee" : {
+	    "path" : "/:exchange/fee",
+	    "method" : "GET",
+	    "required_parameter" : [ "exchange" ]
+	}
+  },
+   "declare" : {
+      "api_exchange_mode" : "content-type",
+      "api_exchange" : "json"
+   },
+  "name" : "btc-e.com",
+  "authority" : "GITHUB:toddfries",
+  "meta" : {
+    "documentation" : "https://btc-e.com/api/documentation"
+  }
+}
