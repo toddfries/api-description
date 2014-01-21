@@ -1,0 +1,49 @@
+{
+  "base_url" : "https://bter.com/api/1",
+  "methods" : {
+	"pairs" : {
+	    "path" : "/pairs",
+	    "method" : "GET"
+	},
+	"tickers" : {
+	    "path" : "/tickers",
+	    "method" : "GET"
+	},
+	"ticker" : {
+	    "path" : "/ticker/:cura_:curb",
+	    "method" : "GET",
+	    "required_parameter" : [ "cura", "curb" ]
+	},
+	"getfunds" : {
+	    "path" : "/private/getfunds",
+	    "method" : "POST",
+	    "authentication" : true
+	},
+	"placeorder" : {
+	    "path" : "/private/placeorder",
+	    "method" : "POST",
+	    "required_parameter" : [ "pair", "type", "rate", "amount" ],
+	    "authentication" : true
+	},
+	"cancelorder" : {
+	    "path" : "/private/cancelorder",
+	    "method" : "POST",
+	    "required_parameter" : [ "order_id" ],
+	    "authentication" : true
+	},
+	"orderlist" : {
+	    "path" : "/private/orderlist",
+	    "method" : "POST",
+	    "authentication" : true
+	}
+  },
+   "declare" : {
+      "api_format_mode" : "content-type",
+      "api_format" : "json"
+   },
+  "name" : "BTER",
+  "authority" : "GITHUB:toddfries",
+  "meta" : {
+    "documentation" : "https://bter.com/api"
+  }
+}
