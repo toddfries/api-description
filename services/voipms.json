@@ -1,0 +1,24 @@
+{
+  "base_url" : "http://www.voip.ms/api/v1",
+  "methods" : {
+	"getBalance" : {
+	    "method" : "GET",
+	    "path" : "/rest.php",
+	    "required_parameter" : [ "method", "api_username", "api_password" ]
+	},
+	"getServersInfo" : {
+	    "method" : "GET",
+	    "path" : "/rest.php",
+	    "required_parameter" : [ "method", "api_username", "api_password" ]
+	}
+  },
+   "declare" : {
+      "api_exchange_mode" : "content-type",
+      "api_exchange" : "json"
+   },
+  "name" : "voip.ms",
+  "authority" : "GITHUB:toddfries",
+  "meta" : {
+    "documentation" : "https://www.voip.ms/m/apidocs.php"
+  }
+}

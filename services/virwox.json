@@ -1,0 +1,29 @@
+{
+  "base_url" : "http://api.virwox.com/api",
+  "methods" : {
+	"getInstruments" : {
+	    "method" : "POST",
+	    "path" : "/json.php",
+	    "required_parameter" : [ "method", "params", "id" ]
+	},
+	"getBestPrices" : {
+	    "method" : "POST",
+	    "path" : "/json.php",
+	    "required_parameter" : [ "method", "params", "id", "symbols" ]
+	},
+	"getMarketDepth" : {
+	    "path" : "/json.php?method=getMarketDepth",
+	    "method" : "POST",
+	    "required_parameter" : [ "params", "id" ]
+	}
+  },
+   "declare" : {
+      "api_exchange_mode" : "content-type",
+      "api_exchange" : "json"
+   },
+  "name" : "virwox.com",
+  "authority" : "GITHUB:toddfries",
+  "meta" : {
+    "documentation" : "https://www.virwox.com/developers.php"
+  }
+}

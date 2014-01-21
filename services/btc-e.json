@@ -6,10 +6,26 @@
 	    "method" : "GET",
 	    "required_parameter" : [ "exchange" ]
 	},
+	"ticker" : {
+	    "path" : "/:exchange/ticker",
+	    "method" : "GET",
+	    "required_parameter" : [ "exchange" ]
+	},
+	"trades" : {
+	    "path" : "/:exchange/trades",
+	    "method" : "GET",
+	    "required_parameter" : [ "exchange" ]
+	},
+	"depth" : {
+	    "path" : "/:exchange/trades",
+	    "method" : "GET",
+	    "required_parameter" : [ "exchange" ]
+	},
 	"getInfo" : {
 	    "base_url" : "https://btc-e.com/tapi",
 	    "path" : "/getInfo",
 	    "method" : "POST",
+	    "required_parameter" : [ "method" ],
 	    "authentication" : true
 	},
 	"TransHistory" : {
