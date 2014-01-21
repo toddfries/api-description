@@ -5,6 +5,36 @@
 	    "path" : "/:exchange/fee",
 	    "method" : "GET",
 	    "required_parameter" : [ "exchange" ]
+	},
+	"getInfo" : {
+	    "base_url" : "https://btc-e.com/tapi",
+	    "path" : "/getInfo",
+	    "method" : "POST",
+	    "authentication" : true
+	},
+	"TransHistory" : {
+	    "base_url" : "https://btc-e.com/tapi",
+	    "path" : "/TransHistory",
+	    "method" : "POST",
+	    "authentication" : true,
+	    "optional_parameters" : [
+		"from",
+		"count",
+		"from_id",
+		"end_id",
+		"order",
+		"since",
+		"end"
+	    ]
+	},
+	"ActiveOrders" : {
+	    "base_url" : "https://btc-e.com/tapi",
+	    "path" : "/ActiveOrders",
+	    "method" : "POST",
+	    "authentication" : true,
+	    "optional_parameters" : [
+		"pair"
+	    ]
 	}
   },
    "declare" : {
