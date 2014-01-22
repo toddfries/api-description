@@ -2,12 +2,14 @@ VALIDATOR := perl ../utils/validator.pl --schema spore_validation.rx --descripti
 SPORE2DOT := perl ../utils/spore2dot.pl
 
 check: spore_validation.rx
-	@make -C github check
-	@make -C googlemaps check
-	@make -C linkedin check
+	@${MAKE} -C github check
+	@${MAKE} -C googlemaps check
+	@${MAKE} -C linkedin check
 	@$(VALIDATOR) amazons3.json
 	@$(VALIDATOR) backtweet.json
 	@$(VALIDATOR) backtype.json
+	@$(VALIDATOR) btc-e.json
+	@$(VALIDATOR) bter.json
 	@$(VALIDATOR) bitly.json
 	@$(VALIDATOR) datapublica.json
 	@$(VALIDATOR) facebook_graph.json
@@ -26,6 +28,8 @@ check: spore_validation.rx
 	@$(VALIDATOR) topsy.json
 	@$(VALIDATOR) twitter.json
 	@$(VALIDATOR) twitter_search.json
+	@$(VALIDATOR) virwox.json
+	@$(VALIDATOR) voipms.json
 	@$(VALIDATOR) intervals.json
 
 test: check
@@ -38,6 +42,8 @@ png: \
     backtweet.png \
     backtype.png \
     bitly.png \
+    btc-e.png \
+    bter.png \
     datapublica.png \
     facebook_graph.png \
     github.png \
@@ -55,10 +61,13 @@ png: \
     ohloh.png \
     topsy.png \
     twitter.png \
-    twitter_search.png
-	@make -C github png
-	@make -C googlemaps png
-	@make -C linkedin png
+    twitter_search.png \
+    virwox.png \
+    voipms.png
+
+	@${MAKE} -C github png
+	@${MAKE} -C googlemaps png
+	@${MAKE} -C linkedin png
 
 %.png : %.dot
 	dot -T png -o $@ $<
@@ -67,7 +76,7 @@ png: \
 	$(SPORE2DOT) $< > $@
 
 clean:
-	@make -C github clean
-	@make -C googlemaps clean
-	@make -C linkedin clean
+	@${MAKE} -C github clean
+	@${MAKE} -C googlemaps clean
+	@${MAKE} -C linkedin clean
 	-rm *.png *.dot spore_validation.rx
