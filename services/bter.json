@@ -1,4 +1,6 @@
 {
+  "name" : "BTER",
+  "version" : "0.1",
   "base_url" : "https://bter.com/api/1",
   "methods" : {
 	"pairs" : {
@@ -52,12 +54,8 @@
 	    "authentication" : true
 	}
   },
-   "declare" : {
-      "api_format_mode" : "content-type",
-      "api_format" : "json"
-   },
-  "name" : "BTER",
   "authority" : "GITHUB:toddfries",
+  "formats" : [ "json" ],
   "meta" : {
     "documentation" : "https://bter.com/api"
   }
