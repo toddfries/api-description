@@ -1,0 +1,23 @@
+{
+  "base_url" : "https://pubapi.cryptsy.com",
+  "methods" : {
+	"markets" : {
+	    "path" : "/api.php?method=marketdatav2",
+	    "method" : "GET"
+	},
+	"market" : {
+	    "path" : "/api.php?method=singlemarketdata",
+	    "method" : "GET",
+	    "required_parameters" : [ "marketid" ]
+	}
+  },
+   "declare" : {
+      "api_format_mode" : "content-type",
+      "api_format" : "json"
+   },
+  "name" : "Cryptsy",
+  "authority" : "GITHUB:toddfries",
+  "meta" : {
+    "documentation" : "https://www.cryptsy.com/pages/api"
+  }
+}
