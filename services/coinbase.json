@@ -24,6 +24,15 @@
 	"historical" : {
 	    "path" : "/prices/historical",
 	    "method" : "GET"
+	},
+	"button" : {
+	    "path" : "/buttons",
+	    "method" : "POST",
+	    "authentication" : true,
+	    "required_parameters" : [ "name", "price_string",
+		"price_currency_iso" ],
+	    "optional_parameters" : [ "description", "type",
+		"custom", "callback_url", "style", "include_email" ]
 	}
   },
    "declare" : {
