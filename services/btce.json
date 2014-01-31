@@ -22,11 +22,11 @@
 	    "required_parameter" : [ "exchange" ]
 	},
 	"getInfo" : {
-	    "base_url" : "https://btc-e.com/tapi",
-	    "path" : "/getInfo",
+	    "base_url" : "https://btc-e.com/",
+	    "path" : "/tapi",
 	    "method" : "POST",
-	    "required_parameter" : [ "method" ],
-	    "authentication" : true
+	    "authentication" : true,
+	    "required_parameter" : [ "method" ]
 	},
 	"TransHistory" : {
 	    "base_url" : "https://btc-e.com/tapi",

@@ -8,7 +8,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) amazons3.json
 	@$(VALIDATOR) backtweet.json
 	@$(VALIDATOR) backtype.json
-	@$(VALIDATOR) btc-e.json
+	@$(VALIDATOR) btce.json
 	@$(VALIDATOR) bter.json
 	@$(VALIDATOR) bitly.json
 	@$(VALIDATOR) datapublica.json
@@ -42,7 +42,7 @@ png: \
     backtweet.png \
     backtype.png \
     bitly.png \
-    btc-e.png \
+    btce.png \
     bter.png \
     datapublica.png \
     facebook_graph.png \
