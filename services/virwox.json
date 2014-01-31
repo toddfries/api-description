@@ -4,17 +4,17 @@
 	"getInstruments" : {
 	    "method" : "POST",
 	    "path" : "/json.php",
-	    "required_parameter" : [ "method", "params", "id" ]
+	    "required_parameter" : [ "method", "id" ]
 	},
 	"getBestPrices" : {
 	    "method" : "POST",
 	    "path" : "/json.php",
-	    "required_parameter" : [ "method", "params", "id", "symbols" ]
+	    "required_parameter" : [ "method", "id", "symbols" ]
 	},
 	"getMarketDepth" : {
-	    "path" : "/json.php?method=getMarketDepth",
+	    "path" : "/json.php",
 	    "method" : "POST",
-	    "required_parameter" : [ "params", "id" ]
+	    "required_parameter" : [ "method", "id"  ]
 	}
   },
    "declare" : {
