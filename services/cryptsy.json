@@ -1,14 +1,15 @@
 {
-  "base_url" : "https://pubapi.cryptsy.com",
+  "base_url" : "http://pubapi.cryptsy.com/",
   "methods" : {
-	"markets" : {
-	    "path" : "/api.php?method=marketdatav2",
-	    "method" : "GET"
-	},
-	"market" : {
-	    "path" : "/api.php?method=singlemarketdata",
+	"marketdatav2" : {
+	    "path" : "/api.php",
 	    "method" : "GET",
-	    "required_parameters" : [ "marketid" ]
+	    "required_parameters" : [ "method" ]
+	},
+	"singlemarketdata" : {
+	    "path" : "/api.php",
+	    "method" : "GET",
+	    "required_parameters" : [ "method", "marketid" ]
 	}
   },
    "declare" : {
