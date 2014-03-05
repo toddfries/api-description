@@ -1,0 +1,28 @@
+{
+  "base_url" : "https://api.kraken.com/0/public",
+  "methods" : {
+	"ticker" : {
+	    "path" : "/Ticker",
+	    "method" : "GET",
+	    "required_parameter" : [ "pair" ]
+	},
+	"assets" : {
+	     "path" : "/Assets",
+	     "method" : "GET"
+	},
+	"assetpairs" : {
+	     "path" : "/AssetPairs",
+	     "method" : "GET"
+	}
+	     
+   },
+   "declare" : {
+      "api_exchange_mode" : "content-type",
+      "api_exchange" : "json"
+   },
+  "name" : "kraken.com",
+  "authority" : "GITHUB:toddfries",
+  "meta" : {
+    "documentation" : "https://www.kraken.com/help/api"
+  }
+}
